@@ -16,6 +16,7 @@ const sanitizeRestProps = ({
     crudGetMatching,
     crudGetOne,
     defaultValue,
+    dependsOnValue,
     filter,
     filterToQuery,
     formClassName,

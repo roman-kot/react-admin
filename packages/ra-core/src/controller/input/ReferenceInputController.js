@@ -110,12 +110,12 @@ export class ReferenceInputController extends Component {
 
     componentWillReceiveProps(nextProps) {
         if (this.props.record.id !== nextProps.record.id ||
-            this.props.depends !== nextProps.depends) {
+            this.props.dependsOnValue !== nextProps.dependsOnValue) {
             this.fetchReferenceAndOptions(nextProps);
         } else if (this.props.input.value !== nextProps.input.value) {
             this.fetchReference(nextProps);
         }
-        if (this.props.depends !== nextProps.depends) {
+        if (this.props.dependsOnValue !== nextProps.dependsOnValue) {
             this.props.change(REDUX_FORM_NAME, this.props.source, null, false, false);
         }
     }
